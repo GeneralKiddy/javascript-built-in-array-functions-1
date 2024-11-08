@@ -5,8 +5,10 @@ const students = [
   { name: "Joan", score: 95 },
 ];
 
-function getAverageStudentScore(students) {
+function getAverageStudentScore(totalScore, students) {
   // Start coding here
+  return totalScore + students.score
 }
 
-getAverageStudentScore(students); // Output: 87.5
+let result = students.reduce(getAverageStudentScore, 0) / students.length; // Output: 87.5
+console.log(result)
